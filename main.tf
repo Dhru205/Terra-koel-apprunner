@@ -2,6 +2,9 @@ resource "aws_apprunner_service" "example" {
   service_name = "example"
 
   source_configuration {
+    authentication_configuration {
+      access_role_arn = "arn:aws:iam::530211691714:role/Dhru-koel"
+    }
     image_repository {
       image_configuration {
         port = "80"
