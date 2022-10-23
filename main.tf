@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+
 resource "aws_apprunner_service" "example" {
   service_name = "example"
 
@@ -18,10 +27,3 @@ resource "aws_apprunner_service" "example" {
   }
 }
 
-resource "aws_apprunner_observability_configuration" "example" {
-  observability_configuration_name = "example"
-
-  trace_configuration {
-    vendor = "AWSXRAY"
-  }
-}
