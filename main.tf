@@ -32,7 +32,5 @@ resource "aws_apprunner_service" "dhru" {
     auto_deployments_enabled = false                            
   }                          
 }
-output "apprunner_service_dhru" {                            
-  value = aws_apprunner_service.dhru                          
-}
+
 
