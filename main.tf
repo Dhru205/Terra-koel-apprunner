@@ -7,7 +7,15 @@ terraform {
   }
 }
 
+resource "aws_apprunner_auto_scaling_configuration_version" "hello" {                            
+  auto_scaling_configuration_name = "hello"
+  # scale between 1-5 containers
+  min_size = 1
+  max_size = 5
+}
+
 resource "aws_apprunner_service" "example" {
+  auto_scaling_configuration_arn = aws_apprunner_auto_scaling_configuration_version.hello.arn
   service_name = "example"
 
   source_configuration {
