@@ -7,17 +7,17 @@ terraform {
   }
 }
 
-resource "aws_apprunner_auto_scaling_configuration_version" "hello" {                            
-  auto_scaling_configuration_name = "hello"
+resource "aws_apprunner_auto_scaling_configuration_version" "Dhru" {                            
+  auto_scaling_configuration_name = "dhru"
   # scale between 1-5 containers
   min_size = 1
   max_size = 5
 }
 
-resource "aws_apprunner_service" "hello" {                            
-  auto_scaling_configuration_arn = aws_apprunner_auto_scaling_configuration_version.hello.arn                          
+resource "aws_apprunner_service" "dhru" {                            
+  auto_scaling_configuration_arn = aws_apprunner_auto_scaling_configuration_version.dhru.arn                          
          
-  service_name = "hello-app-runner"                          
+  service_name = "dhru"                          
                             
   source_configuration {                              
     image_repository {                                
@@ -32,7 +32,7 @@ resource "aws_apprunner_service" "hello" {
     auto_deployments_enabled = false                            
   }                          
 }
-output "apprunner_service_hello" {                            
-  value = aws_apprunner_service.hello                          
+output "apprunner_service_dhru" {                            
+  value = aws_apprunner_service.dhru                          
 }
 
