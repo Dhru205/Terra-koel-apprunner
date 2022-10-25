@@ -7,7 +7,7 @@ terraform {
   }
 }
 
-resource "aws_apprunner_auto_scaling_configuration_version" "Dhru" {                            
+resource "aws_apprunner_auto_scaling_configuration_version" "dhru" {                            
   auto_scaling_configuration_name = "dhru"
   # scale between 1-5 containers
   min_size = 1
