@@ -1,12 +1,12 @@
-terraform {
-  required_version = ">= 0.13"
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
+# terraform {
+#   required_version = ">= 0.13"
+#   required_providers {
+#     aws = {
+#       source  = "hashicorp/aws"
+#       version = "~> 4.0"
+#     }
+#   }
+# }
 
 resource "authentication_configuration" "dhru"{
   access_role_arn= "arn:aws:iam::530211691714:role/ecr-role"
