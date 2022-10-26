@@ -25,7 +25,7 @@ resource "aws_apprunner_service" "example" {
         port = "80"
       }
       image_identifier      = "530211691714.dkr.ecr.ap-northeast-1.amazonaws.com/koel:latest"
-      image_repository_type = "ECR_PUBLIC"
+      image_repository_type = "ECR"
     }
     auto_deployments_enabled = false
   }
