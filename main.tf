@@ -2,14 +2,14 @@
    required_providers {
      aws = {
        source  = "hashicorp/aws"
-       version = "4.36.1"
+       version = "~> 4.0"
      }
    }
  }
 
-resource "authentication_configuration" "dhru"{
-  access_role_arn= "arn:aws:iam::530211691714:role/ecr-role"
-}
+# resource "authentication_configuration" "dhru"{
+#   access_role_arn= "arn:aws:iam::530211691714:role/ecr-role"
+# }
 
 resource "aws_apprunner_service" "example" {
  
