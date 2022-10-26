@@ -14,6 +14,9 @@ resource "aws_apprunner_service" "example" {
   service_name = "example"
 
   source_configuration {
+    authentication_configuration{
+      access_role_arn= "arn:aws:iam::530211691714:role/ecr-role"
+}
     
     image_repository {
       image_configuration {
@@ -23,9 +26,7 @@ resource "aws_apprunner_service" "example" {
       image_repository_type = "ECR"
     }
     auto_deployments_enabled = false
-    authentication_configuration{
-   access_role_arn= "arn:aws:iam::530211691714:role/ecr-role"
-}
+    
  
   }
 
