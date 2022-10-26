@@ -10,8 +10,9 @@
 
 
 resource "aws_apprunner_service" "example" {
-  resource "authentication_configuration"{
-  access_role_arn= "arn:aws:iam::530211691714:role/ecr-role"
+
+  "authentication_configuration"{
+   access_role_arn= "arn:aws:iam::530211691714:role/ecr-role"
 }
  
   service_name = "example"
