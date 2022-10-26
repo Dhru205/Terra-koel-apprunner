@@ -15,7 +15,7 @@ resource "aws_apprunner_service" "example" {
 
   source_configuration {
     authentication_configuration{
-      access_role_arn=  "user/Dhruv"
+      access_role_arn=  "arn:aws:iam::530211691714:user/Dhruv"
 }
     
     image_repository {
